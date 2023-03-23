@@ -1,0 +1,5 @@
+ENV{SERVICE}=="?*", RUN+="/usr/bin/device-service-manager"
+ENV{SYSTEMD_READY}=="?*", RUN+="/usr/bin/device-service-manager"
+ENV{SYSTEMD_WANTS}=="?*", RUN+="/usr/bin/device-service-manager"
+ENV{SYSTEMD_USER_WANTS}=="?*", RUN+="/usr/bin/device-service-manager"
+ACTION=="remove", RUN+="/usr/bin/device-service-manager"
